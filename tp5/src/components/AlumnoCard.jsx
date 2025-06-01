@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-
+import "../css/AlumnoCard.css";
 
 const AlumnoCard = ({alumno, onDelete}) => (
-    <div className="card">
-        <h3>{alumno.nombre} {alumno.apellido}</h3>
-        <p><strong>Curso:</strong>{alumno.curso}</p>
-        <div className="card-botones">
+    <div className="container">
+        <div className="card">
+         <h3>{alumno.nombre} {alumno.apellido}</h3>
+         <p><strong>LU:</strong>{alumno.lu}</p>
+         <p><strong>Curso:</strong>{alumno.curso}</p>
+         <div className="card-botones">
             <Link to={'/alumnos/${alumno.lu}'}>Ver Detalles</Link>
             <Link to={'/alumnos/${alumno.lu}/editar'}>Editar</Link>
             <button onClick={()=>{
@@ -14,6 +16,7 @@ const AlumnoCard = ({alumno, onDelete}) => (
                 }
             }}>Eliminar
             </button>
+         </div>
         </div>
     </div>
 )
