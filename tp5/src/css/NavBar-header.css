@@ -1,0 +1,41 @@
+.navbar-header{
+    background-color: #1d4ed8; 
+    padding: 16px; 
+    color: white;
+    width:100%;
+}
+.navbar-contenido{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin:0 ;
+    width: 100%;
+}
+.titulo {
+    margin: 0;
+    font-size: 23px;
+    font-weight: bold;
+}
+.links{
+    display: flex;
+    gap: 14px;
+}
+.links a{
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+}   
+.links a:hover{
+    cursor: pointer;
+    background-color:  #59a4f5;
+    color: white;
+
+
+}
+  

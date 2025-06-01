@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom"
+import React from "react";
+import "../css/NavBar-header.css";
+
 
 export default function NavBar() {
   return (
-    <nav className="bg-blue-600 p-4 text-white">
-      <ul className="flex gap-4">
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/acerca">Acerca de</Link></li>
-        <li><Link to="/alumnos">Lista de Alumnos</Link></li>
-        <li><Link to="/alumnos/nuevo">Nuevo Alumno</Link></li>
-      </ul>
-    </nav>
+    <header className="navbar-header">
+        <nav className="navbar-contenido">
+          <h1 className="titulo">Gestión de Alumnos</h1>
+          <ul className="links">
+           <li><Link to="/">Inicio</Link></li>
+           <li><Link to="/acerca">Acerca de</Link></li>
+           <li><Link to="/alumnos">Lista de Alumnos</Link></li>
+           <li><Link to="/alumnos/nuevo">Nuevo Alumno</Link></li>
+          </ul>
+        </nav>
+    </header>
   )
 }
