@@ -1,12 +1,11 @@
-# React + Vite
+Integrantes del Grupo 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nombre: Farfán Juan Pablo *nombre de usuario de github: Juanpablo2511
+(tuvo problema con su computadora)
 
-Currently, two official plugins are available:
+Nombre: Fernandez Nadia Evangelina *nombre de usuario de github: NadiaE-Fernandez
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Nombre: Quispe Matías *nombre de github:Matifq14
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+El proyecto esta desarrollado para el Sistema de Gestión de Alumnos.Permite crear,visualizar, editar y eliminar los registros de los alumnos de manera sencilla.Cuenta con un listado de alumnos con sus datos basicos, un formulario para añadir y editar alumnos , la eliminacion de registros con la confirmacion del mismo y la actualizacion de la lista de alumnos.
+En este proyecto se utilizo la libreria React Dom encargada de renderizar los componentes React en el navegador.

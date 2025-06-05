@@ -1,8 +1,9 @@
 // src/pages/NuevoAlumno.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
-
-export default function NuevoAlumno() {
+import "../css/NuevoAlumno.css"
+import { Link } from 'react-router-dom';
+export default function NuevoAlumno({agregarAlumno}) {
   const [alumno, setAlumno] = useState({
     id: "",
     nombre: "",
@@ -28,15 +29,22 @@ export default function NuevoAlumno() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="id" placeholder="LU" onChange={handleChange} required />
-      <input name="nombre" placeholder="Nombre" onChange={handleChange} required />
-      <input name="apellido" placeholder="Apellido" onChange={handleChange} required />
-      <input name="curso" placeholder="Curso" onChange={handleChange} />
-      <input name="email" placeholder="Email" onChange={handleChange} />
-      <input name="domicilio" placeholder="Domicilio" onChange={handleChange} />
-      <input name="telefono" placeholder="Teléfono" onChange={handleChange} />
-      <button type="submit">Guardar</button>
+    <div className="formulario">
+    <form  onSubmit={handleSubmit}>
+       <h4>Nuevo Alumno</h4>
+       <input className="control" name="id" placeholder="LU" type="text" onChange={handleChange} required />
+       <input className="control" name="nombre" placeholder="Nombre" type="text"  onChange={handleChange} required />
+       <input className="control" name="apellido" placeholder="Apellido" type="text"  onChange={handleChange} required />
+       <input className="control" name="curso" placeholder="Curso" type="text"  onChange={handleChange} />
+       <input className="control" name="email" placeholder="Email" type="email" onChange={handleChange} />
+       <input className="control" name="domicilio" placeholder="Domicilio" type="text"  onChange={handleChange} />
+       <input className="control" name="telefono" placeholder="Teléfono" type="text"  onChange={handleChange} />
+       <button className="boton" type="submit">Guardar</button>
+       <div className="link-volver">
+       <Link to="/Alumnos">← Volver a la lista</Link>
+       </div>
     </form>
+</div>
+    
   );
 }
