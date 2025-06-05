@@ -1,12 +1,13 @@
 import React , {useState} from "react";
 import AlumnoCard from "../components/AlumnoCard";
+import Titulo from "../components/Titulo";
 
 
 const ListaAlumnos = ({alumnos, eliminarAlumno }) => {
     
     return (
         <div>
-            <h2>Lista de Alumnos</h2>
+            <Titulo texto="Lista de Alumnos" />
             {alumnos.length === 0 ? (
                 <p>No hay alumnos registrados</p> ) : (
                     alumnos.map(alumno => (
