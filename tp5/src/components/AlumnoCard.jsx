@@ -9,10 +9,10 @@ const AlumnoCard = ({alumno, onDelete}) => (
          <p><strong>LU:</strong>{alumno.lu}</p>
          <p><strong>Curso:</strong>{alumno.curso}</p>
          <div className="card-botones">
-            <Link to={'/alumnos/${alumno.lu}'}>Ver Detalles</Link>
-            <Link to={'/alumnos/${alumno.lu}/editar'}>Editar</Link>
+            <Link to={`/alumnos/${alumno.lu}`}>Ver Detalles</Link>
+            <Link to={`/alumnos/${alumno.lu}/editar`}>Editar</Link>
             <button onClick={()=>{
-                if(window.confirm("¿Estás seguro de eliminar a ${alumno.nombre}?")){
+                if(window.confirm(`¿Estás seguro de eliminar a ${alumno.nombre} ${alumno.apellido } con LU: ${alumno.lu} ?`)){
                     onDelete (alumno.lu);
                 }
             }}>Eliminar

@@ -1,9 +1,13 @@
+
 import React , {useState} from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ListaAlumnos from "./pages/ListaAlumnos";
 import Acerca from "./pages/Acerca";
 import NavBar from "./components/NavBar";
+import DetalleAlumno from "./pages/DetalleAlumno"
+import EditarAlumno from "./pages/EditarAlumno";
+import NuevoAlumno from "./pages/NuevoAlumno";
 
 export default function App() {
   const [alumnos,setAlumnos] = useState([
@@ -47,17 +51,36 @@ export default function App() {
 
   ])
 
+  const editarAlumno = (lu, nuevosDatos) =>{
+    setAlumnos (
+      alumnos.map ((alumno)=>
+      alumno.lu === lu ? { ...alumno, ...nuevosDatos} : alumno )
+    )
+   }
+
   const eliminarAlumno = (lu) => {
     setAlumnos(alumnos.filter(alumno => alumno.lu !== lu));
   }
+
+  const agregarAlumno =(nuevoAlumno) =>{
+    setAlumnos([...alumnos, nuevoAlumno]);
+  }
+
   return (
     <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/alumnos" element={<ListaAlumnos alumnos={alumnos} eliminarAlumno={eliminarAlumno}/>} />
+        <Route path="/alumnos/:lu" element={<DetalleAlumno alumnos={alumnos}/>} />
+        <Route path="/alumnos/:lu/editar" element={<EditarAlumno alumnos={alumnos} editarAlumno={editarAlumno}/>} />
+        <Route path="/alumnos/nuevo" element={<NuevoAlumno agregarAlumno={agregarAlumno} />} />
         <Route path="/acerca" element={<Acerca />} />
       </Routes>
     </div>
   )
 }
+
+
+
+
